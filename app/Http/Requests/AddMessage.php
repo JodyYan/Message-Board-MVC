@@ -25,9 +25,7 @@ class AddMessage extends FormRequest
     {
         return [
             'title' => ['required', 'string'],
-            'content' => ['required', 'min:1', 'max:150'],
-            'author' => ['required'],
-            'user_id' => ['required']
+            'content' => ['required', 'string', 'max:150'],
         ];
     }
 }
