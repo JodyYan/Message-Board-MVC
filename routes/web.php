@@ -19,3 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/message', 'BoardController@index');
+Route::middleware('auth')->group(function (){
+    Route::post('/message', 'BoardController@store');
+});
