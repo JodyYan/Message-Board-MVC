@@ -18,8 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/message', 'BoardController@index');
 Route::get('/messages', 'BoardController@show');
 Route::middleware('auth')->group(function (){
-    Route::post('/message', 'BoardController@store');
+    Route::post('/messages', 'BoardController@store');
+    Route::get('/messages/create', 'BoardController@index');
 });

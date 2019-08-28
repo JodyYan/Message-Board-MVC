@@ -20,7 +20,7 @@
         </ul>
       </div><br />
     @endif
-  <form method="post" action="/message">
+  <form method="post" action="/messages">
           <div class="form-group">
               @csrf
               <label for="name">Title</label>
