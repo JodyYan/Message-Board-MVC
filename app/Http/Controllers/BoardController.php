@@ -24,4 +24,10 @@ class BoardController extends Controller
         Board::create($data);
         return view('board');
     }
+
+    public function show()
+    {
+        $messages = Board::all();
+        return view('index', compact('messages'));
+    }
 }
