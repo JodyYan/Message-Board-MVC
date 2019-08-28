@@ -30,4 +30,10 @@ class BoardController extends Controller
         $messages = Board::all();
         return view('index', compact('messages'));
     }
+
+    public function edit(Board $message)
+    {
+        $messages=Board::findOrfail($message);
+        return view('index', compact('messages'));
+    }
 }
