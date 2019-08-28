@@ -20,7 +20,6 @@
           <td>Content</td>
           <td>Author</td>
           <td>Create Time</td>
-          <td colspan="2">Action</td>
         </tr>
     </thead>
     <tbody>
