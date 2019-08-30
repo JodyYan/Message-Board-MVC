@@ -36,4 +36,15 @@ class BoardController extends Controller
         return view('edit', compact('message'));
     }
 
+    public function update(Board $message, Request $request)
+    {
+        $request->validate([
+            'title' => 'string',
+            'content' => 'string'
+        ]);
+
+        $message->update(request(['title', 'content']));
+
+        return redirect('messages/edit/' . $message->id);
+    }
 }
