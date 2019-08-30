@@ -33,7 +33,7 @@ class BoardController extends Controller
 
     public function edit(Board $message)
     {
-        $messages=Board::findOrfail($message);
-        return view('index', compact('messages'));
+        return view('edit', compact('message'));
     }
+
 }
