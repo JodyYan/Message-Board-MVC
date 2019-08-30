@@ -24,4 +24,5 @@ Route::middleware('auth')->group(function (){
     Route::get('/messages/create', 'BoardController@index');
     Route::get('/messages/edit/{message}', 'BoardController@edit');
     Route::patch('/messages/{message}', 'BoardController@update')->where('message', '[0-9]+');
+    Route::delete('/messages/{message}', 'BoardController@destroy');
 });

@@ -47,4 +47,12 @@ class BoardController extends Controller
 
         return redirect('messages/edit/' . $message->id);
     }
+
+    public function destroy(Board $message)
+    {
+        $message->delete();
+
+        return redirect('messages');
+
+    }
 }

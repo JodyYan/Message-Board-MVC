@@ -20,7 +20,7 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="/messages/{{ $message->id }}">
+      <form method="post" action="/messages/{{ $message->id }}" style="margin-bottom: 1em;">
         @method('PATCH')
         @csrf
         <div class="form-group">
@@ -32,6 +32,11 @@
           <input type="text" class="form-control" name="content" value={{ $message->content }} />
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
+      </form>
+      <form method="post" action="/messages/{{ $message->id }}">
+        @method('DELETE')
+        @csrf
+        <button type="submit" class="btn btn-primary">DELETE</button>
       </form>
   </div>
 </div>
